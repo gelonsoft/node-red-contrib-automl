@@ -1,0 +1,36 @@
+{
+	"name": "node-red-contrib-automl",
+	"version": "0.0.1",
+	"description": "LightAutoML by SberAILab Machine learning package for node-red.",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [
+		"node-red",
+		"machine learning",
+		"ml",
+		"automl",
+		"lama",
+		"scikit learn",
+		"scikit",
+		"sklearn",
+		"regression"
+	],
+	"author": "Gelonsoft",
+	"license": "ISC",
+	"node-red": {
+		"nodes": {
+			"predictor": "nodes/automl-predictor/predictor.js",
+			"automl-trainer": "nodes/trainers/automl-trainer/automl-trainer.js"
+		}
+	},
+	"dependencies": {
+		"child_process": "^1.0.2",
+		"path": "^0.12.7"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/gelonsoft/node-red-contrib-automl.git"
+	}
+}
