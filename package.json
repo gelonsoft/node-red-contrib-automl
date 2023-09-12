@@ -21,7 +21,7 @@
 	"license": "ISC",
 	"node-red": {
 		"nodes": {
-			"predictor": "nodes/automl-predictor/predictor.js",
+			"automl-predictor": "nodes/automl-predictor/automl-predictor.js",
 			"automl-trainer": "nodes/trainers/automl-trainer/automl-trainer.js"
 		}
 	},

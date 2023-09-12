@@ -9,7 +9,7 @@
             task_name: {value:"reg"},
             task_metric: {value:"mse"},
             orient: {value:"split"},
-            roles: {value:"{target:'y'}"}
+            roles: {value:"{\"target\":\"y\"}"}
 		},
 		inputs:1,
 		outputs:2,
@@ -20,7 +20,7 @@
 	});
 </script>
 
-<script type="text/x-red" data-template-name="automl trainer">
+<script type="text/x-red" data-template-name="automl-trainer">
 	<div class="form-row">
 		<label for="node-input-name"><i class="icon-tag"></i>Name</label>
 		<input type="text" id="node-input-name" placeholder="Name">
@@ -68,7 +68,7 @@
 	</div>
 </script>
 
-<script type="text/x-red" data-help-name="automl trainer">
+<script type="text/x-red" data-help-name="automl-trainer">
 	<p>A node that trains a TabularAutoML model.</p>
 
 	<h3>Inputs</h3>

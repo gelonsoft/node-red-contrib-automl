@@ -2,7 +2,18 @@
 
 import pickle
 import os
-
+import json
+import numpy as np
+class NumpyEncoder(json.JSONEncoder):
+	""" Special json encoder for numpy types """
+	def default(self, obj):
+		if isinstance(obj, np.integer):
+			return int(obj)
+		elif isinstance(obj, np.floating):
+			return float(obj)
+		elif isinstance(obj, np.ndarray):
+			return obj.tolist()
+		return json.JSONEncoder.default(self, obj)
 class SKLW:
 	def __init__(self, path, model=None):
 		self.path = path
@@ -25,10 +36,15 @@ class SKLW:
 		pickle.dump(self.model, open(self.path, "wb"))
 
 	def predict(self, x):
-		return self.model.predict(x).tolist()
+		return self.model.predict(x) #.tolist()
 
 	def fit_predict(self, x, roles):
-		return self.model.fit_predict(x,roles=roles)
+		self.model.fit_predict(x,roles=roles)
+		dir = os.path.dirname(self.path)
+		if not os.path.isdir(dir):
+			os.makedirs(dir, exist_ok=True)
+
+		pickle.dump(self.model, open(self.path, "wb"))
 
 	def update(self):
 		modified = os.stat(self.path).st_mtime

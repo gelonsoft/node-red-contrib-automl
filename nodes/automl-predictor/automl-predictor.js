@@ -15,5 +15,5 @@ module.exports = function(RED){
 
     utils.run(RED, node, config)
   }
-  RED.nodes.registerType("predictor", autoMLpredictorNode)
+  RED.nodes.registerType("automl-predictor", autoMLpredictorNode)
 }
