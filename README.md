@@ -29,9 +29,6 @@ This flow loads a training partition and trains a 'automl-trainer', saving the m
 This flow loads a test partition and evaluates a previously trained model.
 ![Evaluation](https://i.imgur.com/oMCfaBO.png "Evaluation")
 
-This flow shows how to use a trained model during deployment. Data is received via mqtt, predictions are made and then sent back.  
-![Deployment](https://i.imgur.com/an7FwAC.png "Deployment")
-
 Example flows available here:
 ```json
 [
