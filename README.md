@@ -1,7 +1,6 @@
 # node-red-contrib-automl
 This module for Node-RED contains a set of nodes which offer machine learning functionalities based on LightAutoML (LAMA) - AutoML framework by Sber AI Lab.
 Automatic value predictions can be performed through the use of this package.
-**Tip:** For dataset creation or assessment use 
 
 ## Pre requisites
 Be sure to have a working installation of [Node-RED](https://nodered.org/ "Node-RED").  
@@ -24,10 +23,10 @@ Flows and test datasets are available in the 'test' folder. Make sure that the p
 **Tip:** you can run 'node-red' (or 'sudo node-red' if you are using linux) from the folder '.node-red/node-modules/node-red-contrib-automl' and the paths will be automatically correct.
 
 This flow loads a training partition and trains a 'automl-trainer', saving the model locally.
-![Training](https://i.imgur.com/yncaHql.png "Training")
+![Training](https://imgur.com/OBuB6LZ.png "Training")
 
 This flow loads a test partition and evaluates a previously trained model.
-![Evaluation](https://i.imgur.com/oMCfaBO.png "Evaluation")
+![Evaluation](https://imgur.com/tTk34y5.png "Evaluation")
 
 Example flows available here:
 ```json
